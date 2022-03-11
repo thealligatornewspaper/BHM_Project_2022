@@ -1,0 +1,337 @@
+@import "compass/css3";
+/*Transitions of pages*/
+#Homepage{
+  animation: transitionIn 2s;
+  position: relative;
+  top: 75px;
+}
+@keyframes slideInR {
+  from{
+    margin-left: 100%;
+    width: 100%;
+  }
+  to{
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slideOutR {
+  from{
+    margin-left: 0%;
+    width: 100%;
+  }
+  to{
+    margin-left: -100%;
+    width: 100%;
+  }
+}
+@keyframes slideOutL {
+  from{
+    margin-left: 0%;
+    width: 100%;
+  }
+  to{
+    margin-left: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes transitionIn{
+  from{
+    opacity: 0;
+    transform: translateX(-10deg);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body {
+   overflow-x:hidden;
+   background-image: url('../images/texture.jpg');
+}
+p{
+    font-family:'Arial';
+}
+h2{
+    font-family: 'Open Sans';
+}
+#logo-title{
+  font-family: 'Open Sans';
+}
+#figcaption{
+    font-family:'Arial';
+}
+.logo{
+  max-width: 40%;
+}
+/*arrow-buttons*/
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  position: relative;
+  top: 10px;
+  cursor: pointer;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  position: relative;
+  right: 25px;
+}
+
+.right:hover{
+  border: solid white;
+  border-width: 0 3px 3px 0;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  position: relative;
+  left: 25px;
+}
+.left:hover{
+  border: solid white;
+  border-width: 0 3px 3px 0;
+}
+
+#motto{
+  color: black;
+}
+#img_SF{
+  max-width: 100%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: transitionIn 5s;
+}
+#artist{
+  font-size:15px;
+}
+/*Sticky Homepage Nav Bar*/
+#HomeNav{
+  top: 0;
+  z-index: 5;
+  background-image: url('../images/texture.jpg');
+  position: fixed;
+  width: 100%;
+}
+
+/*black bar*/
+ul{
+  list-style-type: none;
+  overflow: hidden;
+  z-index: 5;
+  margin: 0;
+  background-image: linear-gradient(to right, #de2701, #ffe430, #00bb50);
+  /* red, yellow, green*/
+  top: 0;
+  padding: 0;
+  position: sticky;
+  width: 100%
+}
+
+li{
+  color: black;
+  padding: 5pt;
+  display: inline;
+  float: left;
+  padding-left: 50pt;
+  padding-right: 50pt;
+}
+li a{
+  text-decoration: none;
+  display: block;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding-left: 2%;
+  padding-right: 2%
+}
+.column-new{
+  width: 90%;
+  padding-left: 3%;
+  padding-right: 3%
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#caption{
+  font-size: 15px;
+  text-align:center;
+}
+#text{
+  text-align:justify;
+}
+#text-page-two{
+  margin-left:8rem;
+  text-align: center;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: verdana;
+}
+#paper-submission{
+  display:flex;
+  border-style:solid;
+  padding:2rem;
+}
+#front-page-text{
+  width: 80%;
+  margin-right:auto;
+  margin-left:auto;
+}
+#info-alligator{
+  display:flex;
+  justify-content:center;
+}
+#donate-box {
+  background-color: lightgrey;
+  width: 80%;
+  border: 15px solid green;
+  padding:20px;
+}
+.donate-box-button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.page-two-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer{
+   display: table;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+}
+/*Slideshow Pg 8*/
+.slideshow-container{
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+
+}
+.slideShow8{
+  display: none;
+  border-radius: 50%;
+}
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.slideText{
+  color: white;
+  font-size: 17px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: grey;
+}
+
+.fade{
+  animation: fade 1.5s;
+}
+@keyframes fade{
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+*{
+  box-sizing: border-box;
+}
+
+/* Page 6 Overlay Text*/
+.pgSixCont{
+  position: relative;
+  width: 100%;
+}
+.overlay{
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ background-color: #A5B39A;
+ overflow: hidden;
+ width: 100%;
+ height: 0;
+ transition: .5s ease;
+}
+
+.pgSixCont:hover .overlay{
+  height: 115%;
+}
+
+.pg2ImgPhoto{
+  position: relative;
+  width: 100%;
+}
+
+.pg2ImgPhoto:hover .overlay{
+  height:auto;
+  padding: 3%;
+}
